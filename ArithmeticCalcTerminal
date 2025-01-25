@@ -1,0 +1,49 @@
+# This is a calculator written by Jimeto Onyeabo
+print("This is a calculator written by Jimeto Onyeabo")
+print()
+print("This calculator does arithmetic operations with 2 numbers only")
+
+# Get the calculator choice and convert it to an integer
+calcChoice = int(input("Enter your calculator choice: 1 for Addition, 2 for Subtraction, 3 for Multiplication, 4 for Division, 5 for Modulo: "))
+
+# Get the two numbers from the user
+num1 = int(input("Enter number 1: "))
+num2 = int(input("Enter number 2: "))
+
+# Define the arithmetic functions
+def addition():
+    ans = num1 + num2
+    print(f"{num1} added to {num2} is equal to {ans}")
+
+def subtraction():
+    ans = num1 - num2
+    print(f"{num1} subtracted by {num2} is equal to {ans}")
+
+def multiplication():
+    ans = num1 * num2
+    print(f"{num1} multiplied by {num2} is equal to {ans}")
+
+def division():
+    if num2 != 0:
+        ans = num1 / num2
+        print(f"{num1} divided by {num2} is equal to {ans}")
+    else:
+        print("Error: Division by zero is not allowed.")
+
+def modulo():
+    ans = num1 % num2
+    print(f"{num1} modulo {num2} is equal to {ans}")
+
+# Perform the calculation based on the user's choice
+if calcChoice == 1:
+    addition()
+elif calcChoice == 2:
+    subtraction()
+elif calcChoice == 3:
+    multiplication()
+elif calcChoice == 4:
+    division()
+elif calcChoice == 5:
+    modulo()
+else:
+    print("Invalid choice. Please choose a number between 1 and 5.")
